@@ -12,6 +12,8 @@ import AllPackages from "./Pages/AllPackages/AllPackages";
 import Booking from "./Pages/Booking/Booking";
 import AuthProvider from "./Context/AuthProvider";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
+import MyOrder from "./Pages/MyOrder/MyOrder";
+import ManageOrder from "./Pages/ManageOrder/ManageOrder";
 
 function App() {
   return (
@@ -35,15 +37,21 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/myOrder">
+            <MyOrder></MyOrder>
+          </Route>
+          <Route path="/manageOrder">
+            <ManageOrder></ManageOrder>
+          </Route>
           <Route path="/addPackages">
             <AddPackages></AddPackages>
           </Route>
           <PrivateRoute path="/allPackages">
             <AllPackages></AllPackages>
           </PrivateRoute>
-          <Route path="/booking/:packageID">
+          <PrivateRoute path="/booking/:packageID">
             <Booking></Booking>
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
           </Route>

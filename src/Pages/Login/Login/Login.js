@@ -15,13 +15,15 @@ const Login = () => {
     signInWithGoogle()
     .then(result => {
       history.push(redirect_uri);
+      sessionStorage.setItem("email",result.user.email);
   })
   }
 
   return (
     <div className="login">
-      <button className=" btn btn-primary px-5" onClick={handleGoogleLogin}>
-        Sign is google
+      <button className=" btn btn-outline-secondary px-5" onClick={handleGoogleLogin}>
+      <img alt="" src="https://img.icons8.com/color/48/000000/google-logo.png"/>
+        <span className="mx-3">Sign is google</span>
       </button>
     </div>
   );

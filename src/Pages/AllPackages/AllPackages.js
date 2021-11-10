@@ -13,19 +13,17 @@ const AllPackages = () => {
     <div className="container">
       <h1 className="text-center p-3">All Services</h1>
       <div className="row ">
-        {packages?.map((pd) => (
+        {packages?.map((tour) => (
           <div className="col-md-4 p-1">
             <div className=" border border p-3">
               <div className="">
-                <img className="w-100" src={pd?.image} alt="" />
+                <img className="w-100" src={tour?.images} alt="" />
               </div>
 
-              <h6>{pd?.name}</h6>
-              <h4>{pd?.model}</h4>
-              <p>{pd?.description}</p>
-              <h3 className="text-danger"> Cost :{pd?.price}$</h3>
-              <Link to={`/booking/${pd._id}`}>
-                <button className="btn btn-success">Add To Cart</button>
+              <h5 className="mt-3" >{tour?.name}</h5>
+              <h4 className="text-danger">Price : {tour?.price} Tk</h4>
+              <Link to={`/booking/${tour._id}`}>
+                <button className="btn btn-success">Book Now</button>
               </Link>
             </div>
           </div>
