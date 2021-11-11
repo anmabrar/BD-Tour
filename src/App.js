@@ -14,10 +14,11 @@ import AuthProvider from "./Context/AuthProvider";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import MyOrder from "./Pages/MyOrder/MyOrder";
 import ManageOrder from "./Pages/ManageOrder/ManageOrder";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <AuthProvider>
       <Router>
         <Header></Header>
@@ -32,7 +33,7 @@ function App() {
             <About></About>
           </Route>
           <Route path="/contact">
-            <Home></Home>
+            <Contact></Contact>
           </Route>
           <Route path="/login">
             <Login></Login>

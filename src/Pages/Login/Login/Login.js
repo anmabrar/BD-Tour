@@ -20,7 +20,7 @@ const Login = () => {
   }
 
   return (
-    <div className="login">
+    <div className="mt-5">
       <button className=" btn btn-outline-secondary px-5" onClick={handleGoogleLogin}>
       <img alt="" src="https://img.icons8.com/color/48/000000/google-logo.png"/>
         <span className="mx-3">Sign is google</span>

@@ -5,12 +5,12 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div>
-      <div className="bg sticky-bottom footer-container pt-5 mt-5 ">
+      <div className="bg sticky-bottom footer-container pt-3 mt-5">
         <Container className="text-light">
           <Row>
-            <Col xs className="text-start">
-              <h6 className="text-decoration-underline fs-3 fw-bold text-info">
-                {" "}
+            <Col  className="text-start">
+              <h6 className="text-decoration-underline fs-3 fw-bold text-warning">
+              
                 <span>
                   <i className="fas fa-book-reader "></i>
                 </span>
@@ -26,7 +26,7 @@ const Footer = () => {
               </p>
             </Col>
             <Col>
-              <h6 className="text-decoration-underline">About BD Tour</h6>
+              <h6 className="text-decoration-underline text-start">About BD Tour</h6>
               <ul className="text-start">
                 <li>Contact Us</li>
                 <li>Our Staff</li>
@@ -35,10 +35,10 @@ const Footer = () => {
               </ul>
             </Col>
             <Col>
-              <h6 className="text-decoration-underline">Contact Info</h6>
+              <h6 className="text-decoration-underline text-start">Contact Info</h6>
               <ul className="text-start">
                 <li>
-                  {" "}
+                 
                   <a href="/"> anmabrar13@gmail.com</a>
                 </li>
                 <li>Call us: 01521332***</li>

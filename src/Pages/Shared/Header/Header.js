@@ -20,7 +20,7 @@ const Header = () => {
       <Nav.Link as={NavLink} to="/home">Home</Nav.Link>
       <Nav.Link as={NavLink} to="/allPackages">Packages</Nav.Link>
       <Nav.Link as={NavLink} to="/about">About</Nav.Link>
-      <Nav.Link as={NavLink} to="/about">Contact</Nav.Link>
+      <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
     </Nav>
    
     <Nav className="d-flex align-items-center">
