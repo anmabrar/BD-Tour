@@ -22,7 +22,7 @@ const MyOrder = () => {
               setControl(!control);
             }
           });
-        console.log(id);
+        console.log(id, email);
       };
     return (
         <div className ="container">
