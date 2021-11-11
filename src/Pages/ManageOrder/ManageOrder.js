@@ -4,6 +4,7 @@ import { Table } from 'react-bootstrap';
 const ManageOrder = () => {
     const [manageOrder, setManageOrder] = useState([]);
     const [status, setStatus] = useState("");
+    const [control, setControl] = useState(false);
 
     const handleStatus = (e) => {
         setStatus(e.target.value);
@@ -13,7 +14,7 @@ const ManageOrder = () => {
         fetch("http://localhost:5000/allOrders")
           .then((res) => res.json())
           .then((data) => setManageOrder(data));
-      }, []);
+      }, [control]);
     
         // const status = "apporved";
       const handleUpdate = (id) => {
@@ -22,8 +23,20 @@ const ManageOrder = () => {
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ status }),
         });
-    
-        console.log(id);
+      };
+
+      const handleDelete = (id) => {
+        fetch(`http://localhost:5000/delteOrder/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount) {
+              alert('Deleted Successfully');
+              setControl(!control);
+            }
+          });
+        
       };
 
     return (
@@ -54,7 +67,7 @@ const ManageOrder = () => {
           <option value="Approve">Approve</option>
         </select>
               </td>
-              <button className="btn bg-danger p-2">Delete</button>
+              <button onClick={() => handleDelete(pd?._id)} className="btn bg-danger p-2">Delete</button>
               <button
                 onClick={() => handleUpdate(pd._id)}
                 className="btn bg-success p-2"
